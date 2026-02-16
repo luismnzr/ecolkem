@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecolkem - Soluciones Químicas Industriales</title>
+  <title>Nosotros - Ecolkem</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,15 +26,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="text-2xl font-bold tracking-tight">ECOLKEM</a>
-        <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center space-x-6">
-          <a href="index.html" class="text-white font-medium border-b-2 border-accent-500 pb-0.5">Inicio</a>
-          <a href="nosotros.html" class="text-gray-300 hover:text-white transition">Nosotros</a>
+          <a href="index.html" class="text-gray-300 hover:text-white transition">Inicio</a>
+          <a href="nosotros.html" class="text-white font-medium border-b-2 border-accent-500 pb-0.5">Nosotros</a>
           <div class="relative group">
-            <button class="text-gray-300 hover:text-white transition flex items-center gap-1">
-              Productos
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
+            <button class="text-gray-300 hover:text-white transition flex items-center gap-1">Productos <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
             <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
               <a href="productos.html" class="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-t-lg text-sm">Fosfatos</a>
               <a href="productos.html" class="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-700 text-sm">Limpiadores</a>
@@ -50,15 +46,13 @@
           </span>
           <a href="contacto.html" class="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2 rounded-lg transition text-sm">Solicitar Cotización</a>
         </div>
-        <!-- Mobile Menu Button -->
         <button id="menu-btn" class="lg:hidden text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
-      <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
-        <a href="index.html" class="block py-2 text-white font-medium">Inicio</a>
-        <a href="nosotros.html" class="block py-2 text-gray-300 hover:text-white">Nosotros</a>
+        <a href="index.html" class="block py-2 text-gray-300 hover:text-white">Inicio</a>
+        <a href="nosotros.html" class="block py-2 text-white font-medium">Nosotros</a>
         <a href="productos.html" class="block py-2 text-gray-300 hover:text-white">Productos</a>
         <a href="contacto.html" class="block py-2 text-gray-300 hover:text-white">Contacto</a>
         <a href="contacto.html" class="inline-block mt-2 bg-accent-500 text-white font-semibold px-5 py-2 rounded-lg text-sm">Solicitar Cotización</a>
@@ -66,147 +60,157 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-navy-900 via-primary-900 to-primary-800 text-white overflow-hidden">
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-          Soluciones químicas industriales de alto rendimiento
-        </h1>
-        <p class="text-lg md:text-xl text-blue-200 mb-8">
-          Productos de alta calidad para tratamiento de superficies, limpieza industrial y tratamiento de aguas. Innovación y sustentabilidad para tu empresa.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="productos.html" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg">Ver Productos</a>
-          <a href="contacto.html" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3 rounded-lg transition border border-white/30">Contáctanos</a>
-        </div>
-      </div>
-    </div>
-    <div class="absolute right-0 top-0 w-1/2 h-full opacity-10">
-      <svg class="w-full h-full" viewBox="0 0 200 200" fill="currentColor"><circle cx="150" cy="100" r="120"/></svg>
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-r from-navy-900 to-primary-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-blue-300 mb-4">
+        <a href="index.html" class="hover:text-white">Inicio</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Nosotros</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold">Acerca de Ecolkem</h1>
     </div>
   </section>
 
-  <!-- Features / Why Us -->
-  <section class="py-16 md:py-24 bg-gray-50">
+  <!-- Our Story -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Nuestra Historia</h2>
+          <p class="text-gray-600 mb-4">Ecolkem fue fundada con la visión de proporcionar soluciones químicas industriales que combinan alto rendimiento con responsabilidad ambiental. Desde nuestros inicios, nos hemos dedicado a desarrollar productos innovadores para el tratamiento de superficies y procesos industriales.</p>
+          <p class="text-gray-600 mb-4">Con más de 20 años de experiencia en la industria, hemos construido relaciones sólidas con empresas de manufactura, automotriz y metalúrgica en todo el país. Nuestro equipo de químicos e ingenieros trabaja constantemente en el desarrollo de nuevas formulaciones.</p>
+          <p class="text-gray-600">Hoy, Ecolkem es reconocida como líder en soluciones de pretratamiento de superficies, ofreciendo una línea completa de productos que incluye fosfatos, limpiadores industriales, tratamiento de aguas y antioxidantes.</p>
+        </div>
+        <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl aspect-[4/3] flex items-center justify-center">
+          <svg class="w-24 h-24 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Drives Us -->
+  <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Nos comprometemos con la innovación, la calidad y la satisfacción de nuestros clientes.</p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Lo que nos impulsa</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Nuestros valores fundamentales guían cada decisión que tomamos.</p>
       </div>
       <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
           <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
           <h3 class="text-lg font-semibold mb-2">Innovación</h3>
-          <p class="text-gray-600 text-sm">Fórmulas de vanguardia desarrolladas en nuestro laboratorio de I+D.</p>
+          <p class="text-gray-600 text-sm">Investigación continua para desarrollar soluciones más eficientes y sustentables.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
           <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
           <h3 class="text-lg font-semibold mb-2">Calidad</h3>
-          <p class="text-gray-600 text-sm">Productos certificados bajo los más altos estándares internacionales.</p>
+          <p class="text-gray-600 text-sm">Estándares rigurosos en cada producto que fabricamos y entregamos.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
           <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="text-lg font-semibold mb-2">Sustentabilidad</h3>
-          <p class="text-gray-600 text-sm">Comprometidos con el medio ambiente y procesos responsables.</p>
+          <p class="text-gray-600 text-sm">Compromiso con el medio ambiente en cada formulación y proceso.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
           <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
           <h3 class="text-lg font-semibold mb-2">Servicio</h3>
-          <p class="text-gray-600 text-sm">Soporte técnico especializado y atención personalizada.</p>
+          <p class="text-gray-600 text-sm">Atención personalizada y soporte técnico en cada etapa del proceso.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Product Categories Preview -->
+  <!-- Our Capabilities -->
   <section class="py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Productos</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Líneas de productos diseñadas para cada necesidad industrial.</p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestras Capacidades</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Infraestructura completa para atender todas tus necesidades industriales.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div>
+          <div class="w-20 h-20 bg-primary-50 border-2 border-primary-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2">Fosfatos</h3>
-            <p class="text-gray-600 text-sm mb-4">Recubrimientos de fosfato de hierro y zinc para pretratamiento de superficies.</p>
-            <a href="productos.html" class="text-primary-600 font-medium hover:text-primary-700 transition text-sm">Ver más &rarr;</a>
-          </div>
+          <h4 class="font-semibold text-sm">Laboratorio I+D</h4>
+          <p class="text-gray-500 text-xs mt-1">Investigación y desarrollo de fórmulas</p>
         </div>
-        <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        <div>
+          <div class="w-20 h-20 bg-primary-50 border-2 border-primary-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2">Limpiadores Industriales</h3>
-            <p class="text-gray-600 text-sm mb-4">Desengrasantes y limpiadores de grado profesional para industria.</p>
-            <a href="productos.html" class="text-primary-600 font-medium hover:text-primary-700 transition text-sm">Ver más &rarr;</a>
-          </div>
+          <h4 class="font-semibold text-sm">Formulaciones a Medida</h4>
+          <p class="text-gray-500 text-xs mt-1">Soluciones personalizadas</p>
         </div>
-        <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-          <div class="aspect-[4/3] bg-gradient-to-br from-primary-700 to-navy-900 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        <div>
+          <div class="w-20 h-20 bg-primary-50 border-2 border-primary-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2">Tratamiento de Aguas</h3>
-            <p class="text-gray-600 text-sm mb-4">Soluciones para tratamiento y reciclaje de aguas residuales industriales.</p>
-            <a href="productos.html" class="text-primary-600 font-medium hover:text-primary-700 transition text-sm">Ver más &rarr;</a>
+          <h4 class="font-semibold text-sm">Control de Calidad</h4>
+          <p class="text-gray-500 text-xs mt-1">Pruebas y certificación rigurosa</p>
+        </div>
+        <div>
+          <div class="w-20 h-20 bg-primary-50 border-2 border-primary-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
+          <h4 class="font-semibold text-sm">Soporte Técnico</h4>
+          <p class="text-gray-500 text-xs mt-1">Asistencia especializada</p>
+        </div>
+        <div>
+          <div class="w-20 h-20 bg-primary-50 border-2 border-primary-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+          </div>
+          <h4 class="font-semibold text-sm">Entrega Nacional</h4>
+          <p class="text-gray-500 text-xs mt-1">Distribución a todo el país</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Capabilities -->
-  <section class="py-16 bg-primary-900 text-white">
+  <!-- Standards & Compliance -->
+  <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestras Capacidades</h2>
-        <p class="text-blue-200 max-w-2xl mx-auto">Infraestructura completa para atender todas tus necesidades.</p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Normas y Cumplimiento</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Cumplimos con los estándares más exigentes de la industria.</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-        <div>
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-primary-600">
+          <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
           </div>
-          <p class="text-sm font-medium">Laboratorio I+D</p>
+          <h3 class="font-semibold mb-2">ISO 9001:2015</h3>
+          <p class="text-gray-600 text-sm">Sistema de gestión de calidad certificado.</p>
         </div>
-        <div>
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-primary-600">
+          <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <p class="text-sm font-medium">Formulaciones a Medida</p>
+          <h3 class="font-semibold mb-2">Biodegradable</h3>
+          <p class="text-gray-600 text-sm">Formulaciones ambientalmente responsables.</p>
         </div>
-        <div>
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-primary-600">
+          <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
           </div>
-          <p class="text-sm font-medium">Control de Calidad</p>
+          <h3 class="font-semibold mb-2">Certificación Industrial</h3>
+          <p class="text-gray-600 text-sm">Aprobados para los principales sectores industriales.</p>
         </div>
-        <div>
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-primary-600">
+          <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
           </div>
-          <p class="text-sm font-medium">Soporte Técnico</p>
-        </div>
-        <div>
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
-          </div>
-          <p class="text-sm font-medium">Entrega Nacional</p>
+          <h3 class="font-semibold mb-2">Seguridad Primero</h3>
+          <p class="text-gray-600 text-sm">Cumplimiento total con normas de seguridad y manejo.</p>
         </div>
       </div>
     </div>
@@ -216,7 +220,7 @@
   <section class="bg-primary-700 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para mejorar tus operaciones?</h2>
-      <p class="text-blue-200 text-lg mb-8 max-w-2xl mx-auto">Contáctanos hoy y descubre cómo nuestros productos pueden optimizar tus procesos industriales.</p>
+      <p class="text-blue-200 text-lg mb-8 max-w-2xl mx-auto">Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tus necesidades.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="contacto.html" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg">Solicitar Cotización</a>
         <a href="tel:+525551234567" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3 rounded-lg transition border border-white/30">Llamar Ahora</a>
