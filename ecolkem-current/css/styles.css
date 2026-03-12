@@ -1,0 +1,126 @@
+
+.jumbotron {
+    h1 {color: #f00}
+}
+.imgderecha {
+    float: right;
+}
+.imgizquierda {
+    float: left;
+}
+.imgcentro {
+    text-align: center;
+}
+.imgthumb {
+     float: right;
+     margin: 0px 0px 10px 10px;
+}
+.carjrm {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.breadjrm {
+    margin-bottom: 15px;
+    
+}
+.footerjr {
+    background-color: #333333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+.footer-title-1 {
+    color: #eee;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.footer-title-2 {
+    color: #eee;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 34px;
+}
+.footer-title-3 {
+    color: #3366ae;
+    font-size: 20px;
+    line-height: 34px;
+    text-decoration: underline;
+}
+.footer-title-4 {
+    color: #eee;
+    font-size: 18px;
+    line-height: 26px;
+}
+.footbar {
+    border-right-style: double;
+    border-left-style: double;
+    border-color: #eee;
+}
+.tamano {
+    width: 100%;
+    padding: 10px 0px;
+}
+.txtbx {
+    border-radius: 5px;
+    display: block;
+}
+.bloque {
+    text-align: center;
+    height: 250px;
+}
+.tagverde {
+    color: #fff;
+    background-color: #5cb85c;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 6px;
+    vertical-align: central;  
+}
+.tagrojo {
+    color: #fff;
+    background-color: #d9534f;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 6px;
+    vertical-align: central;  
+}
+.formaEmpleo {
+    width: 650px;
+    margin: 0 auto;
+    background-color: #f88337;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 5px;
+    
+}
+.bordeIzq {
+    border-left: 1px solid gray;
+}
+.tablaProd {
+    border-radius: 10px;
+}
+.celdaProd {
+    text-align: center;
+    font-weight: bold;
+}
+.encabProd {
+    color: #333333;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 2px solid blue;
+}
+.encabTxt {
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+.linksRedes {
+    width: 30px;
+    margin: 40px 3px 20px 3px;
+    border: "0";
+}
+
+
+
+
