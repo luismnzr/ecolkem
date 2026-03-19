@@ -203,12 +203,12 @@
       .ecbot-btn {
         position: fixed; bottom: 24px; right: 24px; z-index: 9999;
         width: 60px; height: 60px; border-radius: 50%;
-        background: #e8713a; border: none; cursor: pointer;
+        background: #E70102; border: none; cursor: pointer;
         box-shadow: 0 4px 16px rgba(0,0,0,0.25);
         display: flex; align-items: center; justify-content: center;
         transition: transform 0.2s, background 0.2s;
       }
-      .ecbot-btn:hover { transform: scale(1.08); background: #d4622e; }
+      .ecbot-btn:hover { transform: scale(1.08); background: #C50102; }
       .ecbot-btn svg { width: 28px; height: 28px; fill: white; }
 
       .ecbot-window {
@@ -279,14 +279,14 @@
         padding: 8px 16px; font-size: 13.5px; outline: none;
         transition: border-color 0.15s;
       }
-      .ecbot-input:focus { border-color: #3b82f6; }
+      .ecbot-input:focus { border-color: #124EC0; }
       .ecbot-send {
-        background: #e8713a; border: none; border-radius: 50%;
+        background: #E70102; border: none; border-radius: 50%;
         width: 36px; height: 36px; cursor: pointer;
         display: flex; align-items: center; justify-content: center;
         transition: background 0.15s;
       }
-      .ecbot-send:hover { background: #d4622e; }
+      .ecbot-send:hover { background: #C50102; }
       .ecbot-send svg { width: 18px; height: 18px; fill: white; }
 
       .ecbot-footer {
