@@ -19,8 +19,8 @@
       ? 'No estoy seguro de cómo responder a eso. Te recomiendo contactar a nuestro equipo de ventas para una respuesta personalizada.'
       : 'I\'m not sure how to answer that. I recommend contacting our sales team for a personalized response.',
     contactCTA: isSpanish
-      ? '📞 <a href="' + (window.location.pathname.includes('/productos/') ? '../contacto.html' : 'contacto.html') + '" class="ecbot-link">Contactar Ventas</a> | 📧 <a href="mailto:info@ecolkem.com" class="ecbot-link">info@ecolkem.com</a> | ☎️ <a href="tel:+528183108434" class="ecbot-link">(81) 8310 8434</a>'
-      : '📞 <a href="' + (window.location.pathname.includes('/products/') ? '../contact.html' : 'contact.html') + '" class="ecbot-link">Contact Sales</a> | 📧 <a href="mailto:info@ecolkem.com" class="ecbot-link">info@ecolkem.com</a> | ☎️ <a href="tel:18663265536" class="ecbot-link">1-866-ECOLKEM</a>',
+      ? '📞 <a href="' + (window.location.pathname.includes('/productos/') ? '../contacto.html' : 'contacto.html') + '" class="ecbot-link">Contactar Ventas</a> | 📧 <a href="mailto:servicioalcliente@ecolkem.com" class="ecbot-link">servicioalcliente@ecolkem.com</a> | ☎️ <a href="tel:+528183108434" class="ecbot-link">(81) 8310 8434</a>'
+      : '📞 <a href="' + (window.location.pathname.includes('/products/') ? '../contact.html' : 'contact.html') + '" class="ecbot-link">Contact Sales</a> | 📧 <a href="mailto:servicioalcliente@ecolkem.com" class="ecbot-link">servicioalcliente@ecolkem.com</a> | ☎️ <a href="tel:18663265536" class="ecbot-link">1-866-ECOLKEM</a>',
     quickBtns: isSpanish
       ? ['Productos', 'Contacto', 'Cotización', 'Horario']
       : ['Products', 'Contact', 'Quote', 'Hours'],
@@ -59,15 +59,15 @@
     },
     {
       keywords: ['contacto', 'teléfono', 'telefono', 'llamar', 'email', 'correo', 'dirección', 'direccion', 'ubicación', 'ubicacion', 'whatsapp'],
-      answer: '📍 <b>Dirección:</b> Frutillas 316, Col. Mirasol I, Monterrey, NL 64102, México<br>📞 <b>Teléfono:</b> (81) 8310 8434 | 1-866-ECOLKEM (EUA)<br>📧 <b>Email:</b> info@ecolkem.com<br><br><b>Equipo de Ventas:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
+      answer: '📍 <b>Dirección:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, México<br>📞 <b>Teléfono:</b> (81) 8310 8434 | 1-866-ECOLKEM (EUA)<br>📧 <b>Email:</b> servicioalcliente@ecolkem.com<br><br><b>Equipo de Ventas:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
     },
     {
       keywords: ['horario', 'hora', 'abierto', 'cerrado', 'atención', 'atencion'],
-      answer: '🕗 Nuestro horario de atención es <b>Lunes a Viernes, 8:00 AM a 6:00 PM (hora centro)</b>.<br><br>Fuera de horario, puedes enviarnos un correo a info@ecolkem.com y te responderemos al siguiente día hábil.',
+      answer: '🕗 Nuestro horario de atención es <b>Lunes a Viernes, 8:00 AM a 6:00 PM (hora centro)</b>.<br><br>Fuera de horario, puedes enviarnos un correo a servicioalcliente@ecolkem.com y te responderemos al siguiente día hábil.',
     },
     {
       keywords: ['cotización', 'cotizacion', 'precio', 'costo', 'comprar', 'presupuesto', 'pedir'],
-      answer: 'Para solicitar una cotización, puedes:<br>• Llenar el formulario en nuestra <a href="contacto.html" class="ecbot-link">página de contacto</a><br>• Enviar un correo a <a href="mailto:info@ecolkem.com" class="ecbot-link">info@ecolkem.com</a><br>• Llamar al (81) 8310 8434<br>• Contactar por WhatsApp a nuestros asesores<br><br>Nuestro equipo te responderá a la brevedad con precios y disponibilidad.',
+      answer: 'Para solicitar una cotización, puedes:<br>• Llenar el formulario en nuestra <a href="contacto.html" class="ecbot-link">página de contacto</a><br>• Enviar un correo a <a href="mailto:servicioalcliente@ecolkem.com" class="ecbot-link">servicioalcliente@ecolkem.com</a><br>• Llamar al (81) 8310 8434<br>• Contactar por WhatsApp a nuestros asesores<br><br>Nuestro equipo te responderá a la brevedad con precios y disponibilidad.',
     },
     {
       keywords: ['envío', 'envio', 'entrega', 'cobertura', 'dónde', 'donde', 'país', 'pais'],
@@ -124,15 +124,15 @@
     },
     {
       keywords: ['contact', 'phone', 'call', 'email', 'address', 'location', 'where', 'whatsapp', 'reach'],
-      answer: '📍 <b>Address:</b> Frutillas 316, Col. Mirasol I, Monterrey, NL 64102, Mexico<br>📞 <b>Phone:</b> (81) 8310 8434 | 1-866-ECOLKEM (US toll-free)<br>📧 <b>Email:</b> info@ecolkem.com<br><br><b>Sales Team:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
+      answer: '📍 <b>Address:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, Mexico<br>📞 <b>Phone:</b> (81) 8310 8434 | 1-866-ECOLKEM (US toll-free)<br>📧 <b>Email:</b> servicioalcliente@ecolkem.com<br><br><b>Sales Team:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
     },
     {
       keywords: ['hour', 'hours', 'open', 'close', 'schedule', 'time', 'available'],
-      answer: '🕗 We\'re open <b>Monday through Friday, 8:00 AM to 6:00 PM (CST)</b>.<br><br>Outside business hours, email us at info@ecolkem.com and we\'ll respond the next business day.',
+      answer: '🕗 We\'re open <b>Monday through Friday, 8:00 AM to 6:00 PM (CST)</b>.<br><br>Outside business hours, email us at servicioalcliente@ecolkem.com and we\'ll respond the next business day.',
     },
     {
       keywords: ['quote', 'price', 'cost', 'buy', 'purchase', 'order', 'pricing'],
-      answer: 'To request a quote you can:<br>• Fill out the form on our <a href="contact.html" class="ecbot-link">contact page</a><br>• Email <a href="mailto:info@ecolkem.com" class="ecbot-link">info@ecolkem.com</a><br>• Call 1-866-ECOLKEM (toll-free US)<br>• Reach our sales reps via WhatsApp<br><br>Our team will get back to you promptly with pricing and availability.',
+      answer: 'To request a quote you can:<br>• Fill out the form on our <a href="contact.html" class="ecbot-link">contact page</a><br>• Email <a href="mailto:servicioalcliente@ecolkem.com" class="ecbot-link">servicioalcliente@ecolkem.com</a><br>• Call 1-866-ECOLKEM (toll-free US)<br>• Reach our sales reps via WhatsApp<br><br>Our team will get back to you promptly with pricing and availability.',
     },
     {
       keywords: ['ship', 'deliver', 'coverage', 'countr', 'international', 'where do you'],
