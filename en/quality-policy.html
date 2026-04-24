@@ -166,7 +166,21 @@
         </div>
 
         <div>
-          <img src="../Images/cert-iso.jpg" alt="ISO 9001:2015 Certification" class="rounded-2xl shadow-lg w-full object-cover mb-8">
+          <!-- Certificate viewer with language toggle -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-6 border border-gray-200">
+            <div class="flex border-b border-gray-200" role="tablist" aria-label="Certificate language">
+              <button type="button" id="cert-tab-en" role="tab" aria-selected="true" class="flex-1 px-4 py-3 text-sm font-medium text-primary-700 bg-primary-50 border-b-2 border-primary-600">English</button>
+              <button type="button" id="cert-tab-es" role="tab" aria-selected="false" class="flex-1 px-4 py-3 text-sm font-medium text-gray-600 hover:text-primary-600 border-b-2 border-transparent">Espa&ntilde;ol</button>
+            </div>
+            <iframe id="cert-frame" src="../Images/Certificado%20ISO%209001%20ECOLKEM%20(Eng).pdf#view=FitH" title="ISO 9001 Certificate ECOLKEM" class="w-full" style="height:520px;border:0"></iframe>
+            <div class="flex items-center justify-between gap-3 px-4 py-3 bg-gray-50 text-sm">
+              <span class="text-gray-500">Current certificate</span>
+              <a id="cert-download" href="../Images/Certificado%20ISO%209001%20ECOLKEM%20(Eng).pdf" download class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
 
           <div class="bg-navy-800 text-white rounded-2xl p-8">
             <h3 class="text-xl font-bold mb-4">Our Commitment</h3>
@@ -244,6 +258,26 @@
     document.getElementById('menu-btn').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+    (function(){
+      var tabEn = document.getElementById('cert-tab-en');
+      var tabEs = document.getElementById('cert-tab-es');
+      var frame = document.getElementById('cert-frame');
+      var dl = document.getElementById('cert-download');
+      var pdfEn = '../Images/Certificado%20ISO%209001%20ECOLKEM%20(Eng).pdf';
+      var pdfEs = '../Images/Certificado%20ISO%209001%20ECOLKEM%20(Esp).pdf';
+      function activate(active, inactive, pdf) {
+        active.setAttribute('aria-selected', 'true');
+        active.classList.add('text-primary-700', 'bg-primary-50', 'border-primary-600');
+        active.classList.remove('text-gray-600', 'border-transparent');
+        inactive.setAttribute('aria-selected', 'false');
+        inactive.classList.remove('text-primary-700', 'bg-primary-50', 'border-primary-600');
+        inactive.classList.add('text-gray-600', 'border-transparent');
+        frame.src = pdf + '#view=FitH';
+        dl.href = pdf;
+      }
+      tabEn.addEventListener('click', function(){ activate(tabEn, tabEs, pdfEn); });
+      tabEs.addEventListener('click', function(){ activate(tabEs, tabEn, pdfEs); });
+    })();
   </script>
 
 <script src="../js/chatbot.js"></script>

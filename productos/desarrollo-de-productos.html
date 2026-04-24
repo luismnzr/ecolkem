@@ -117,7 +117,7 @@
           <!-- Image and Intro -->
           <div class="md:flex gap-8">
             <div class="md:w-1/2 mb-6 md:mb-0">
-              <img src="../Images/Desarrollo-de-productos.jpg" alt="Desarrollo de Productos Qu&iacute;micos" class="rounded-lg shadow-md w-full">
+              <img src="../Images/productos/laboratorio-id.jpg" alt="Laboratorio de Investigaci&oacute;n y Desarrollo Ecolkem" class="rounded-lg shadow-md w-full">
             </div>
             <div class="md:w-1/2">
               <p class="text-gray-600">Nuestro equipo de investigaci&oacute;n y desarrollo trabaja de la mano con nuestros clientes para crear soluciones qu&iacute;micas a la medida de sus necesidades espec&iacute;ficas. Ya sea que necesite un producto completamente nuevo o mejorar uno existente, tenemos la experiencia y los recursos para lograrlo.</p>
@@ -217,6 +217,93 @@
               </li>
             </ul>
           </div>
+
+          <!--
+            TODO: wire form submission with the client.
+            Currently the form falls back to `mailto:` so it still delivers to servicioalcliente@ecolkem.com
+            while we decide between Formspree, EmailJS, Resend, or an in-house SMTP endpoint.
+          -->
+          <div id="diagnostico" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 md:p-10">
+            <div class="mb-8">
+              <h2 class="text-2xl md:text-3xl font-bold text-navy-800 mb-3">Cu&eacute;ntenos sobre su proceso</h2>
+              <p class="text-gray-600">Nuestro equipo t&eacute;cnico analizar&aacute; su informaci&oacute;n y le propondr&aacute; alternativas reales de mejora.</p>
+            </div>
+
+            <form id="diagnostic-form" action="mailto:servicioalcliente@ecolkem.com?subject=Nuevo%20diagn%C3%B3stico%20t%C3%A9cnico%20%E2%80%93%20Desarrollo%20de%20producto" method="post" enctype="text/plain" class="space-y-8">
+
+              <fieldset class="space-y-4">
+                <legend class="text-lg font-bold text-navy-800 mb-3">1. Informaci&oacute;n de contacto</legend>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-nombre">Nombre completo *</label>
+                    <input id="diag-nombre" name="Nombre" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-empresa">Empresa *</label>
+                    <input id="diag-empresa" name="Empresa" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-correo">Correo electr&oacute;nico *</label>
+                    <input id="diag-correo" name="Correo" type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-telefono">Tel&eacute;fono <span class="text-gray-400 font-normal">(opcional)</span></label>
+                    <input id="diag-telefono" name="Telefono" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">2. Descripci&oacute;n del proceso actual</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-proceso">Describa brevemente el proceso, aplicaci&oacute;n o producto que desea mejorar:</label>
+                <textarea id="diag-proceso" name="Proceso" rows="4" required placeholder="Ej. limpieza, fosfatizado, impresi&oacute;n, mantenimiento&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset class="space-y-4">
+                <legend class="text-lg font-bold text-navy-800 mb-3">3. Situaci&oacute;n actual</legend>
+                <div>
+                  <label class="block text-sm text-gray-600 mb-2" for="diag-producto-actual">&iquest;Qu&eacute; producto o soluci&oacute;n utiliza actualmente? <span class="text-gray-400">(si aplica)</span></label>
+                  <input id="diag-producto-actual" name="ProductoActual" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-600 mb-2" for="diag-proveedor">Proveedor actual <span class="text-gray-400">(opcional)</span></label>
+                  <input id="diag-proveedor" name="Proveedor" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">4. Problema principal</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-problema">&iquest;Qu&eacute; problema(s) est&aacute; enfrentando actualmente?</label>
+                <textarea id="diag-problema" name="Problema" rows="4" required placeholder="Ej. costos altos, calidad inconsistente, tiempos de entrega, regulaciones&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">5. Objetivo del proyecto</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-objetivo">&iquest;Qu&eacute; le gustar&iacute;a mejorar o lograr?</label>
+                <textarea id="diag-objetivo" name="Objetivo" rows="3" required placeholder="Ej. reducci&oacute;n de costos, mejora t&eacute;cnica, sustituci&oacute;n de importado&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">6. Volumen / impacto</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-consumo">Consumo aproximado o nivel de uso del producto/proceso:</label>
+                <input id="diag-consumo" name="Consumo" type="text" placeholder='Ej. "200 L/mes", "uso diario en l&iacute;nea de producci&oacute;n"' class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">7. Informaci&oacute;n t&eacute;cnica adicional</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-info">Comparta cualquier dato relevante sobre su proceso (materiales, condiciones, fallas, restricciones, etc.):</label>
+                <textarea id="diag-info" name="InformacionAdicional" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <div class="pt-4 border-t border-gray-100">
+                <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3 rounded-lg transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                  Enviar diagn&oacute;stico
+                </button>
+                <p class="text-xs text-gray-500 mt-4">Su informaci&oacute;n ser&aacute; revisada por nuestro equipo t&eacute;cnico. Nos pondremos en contacto en breve.</p>
+              </div>
+            </form>
+          </div>
         </div>
 
         <!-- Sidebar -->
@@ -236,8 +323,8 @@
           <!-- Contact CTA -->
           <div class="bg-navy-800 text-white rounded-lg p-6">
             <h3 class="font-bold mb-3">&#191;Tiene un proyecto en mente?</h3>
-            <p class="text-sm text-gray-300 mb-4">Cont&aacute;ctenos para discutir c&oacute;mo podemos desarrollar una soluci&oacute;n a la medida de sus necesidades.</p>
-            <a href="../contacto.html" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-4 py-2 rounded transition text-sm w-full text-center">Iniciar un Proyecto</a>
+            <p class="text-sm text-gray-300 mb-4">Complete el diagn&oacute;stico t&eacute;cnico y uno de nuestros representantes se pondr&aacute; en contacto con usted.</p>
+            <a href="#diagnostico" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-4 py-2 rounded transition text-sm w-full text-center">Iniciar Diagn&oacute;stico</a>
           </div>
         </aside>
       </div>

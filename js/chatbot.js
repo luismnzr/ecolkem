@@ -6,8 +6,8 @@
 (function () {
   'use strict';
 
-  // Detect language from URL path
-  const isSpanish = window.location.pathname.includes('/es/');
+  // Detect language from URL path. English pages live under /en/; Spanish is the default.
+  const isSpanish = !window.location.pathname.includes('/en/');
 
   const t = {
     title: isSpanish ? 'Asistente Ecolkem' : 'Ecolkem Assistant',
@@ -51,7 +51,7 @@
     },
     {
       keywords: ['limpieza', 'mantenimiento', 'mro', 'manos', 'dieléctrico', 'dielectrico', 'ecosolve'],
-      answer: 'Nuestra línea de limpieza industrial incluye:<br>• <b>RED Degreaser</b> — desengrasante industrial multiusos<br>• <b>TOP Degreaser</b> — limpiador de manos para mecánicos<br>• <b>ECOSOLVE-E5</b> — solvente dieléctrico (25,000V, no inflamable)',
+      answer: 'Nuestra línea de limpieza industrial incluye:<br>• <b>RED Degreaser</b> — desengrasante industrial multiusos<br>• <b>Limpiadores Alcalinos de Alta Presión (MET-104 LF)</b> — limpieza de metales previo a pintura<br>• <b>ECOSOLVE-E5</b> — solvente dieléctrico (25,000V, no inflamable)',
     },
     {
       keywords: ['desarrollo', 'medida', 'personalizado', 'custom', 'formulación', 'formulacion'],
@@ -59,7 +59,7 @@
     },
     {
       keywords: ['contacto', 'teléfono', 'telefono', 'llamar', 'email', 'correo', 'dirección', 'direccion', 'ubicación', 'ubicacion', 'whatsapp'],
-      answer: '📍 <b>Dirección:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, México<br>📞 <b>Teléfono:</b> (81) 8310 8434 | 1-866-ECOLKEM (EUA)<br>📧 <b>Email:</b> servicioalcliente@ecolkem.com<br><br><b>Equipo de Ventas:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
+      answer: '📍 <b>Dirección:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, México<br>📞 <b>Teléfono:</b> (81) 8310 8434 | 1-866-ECOLKEM (EUA)<br>📱 <b>WhatsApp:</b> <a href="https://wa.me/528183108434" class="ecbot-link" target="_blank">+52 81 8310 8434</a><br>📧 <b>Email:</b> servicioalcliente@ecolkem.com',
     },
     {
       keywords: ['horario', 'hora', 'abierto', 'cerrado', 'atención', 'atencion'],
@@ -116,7 +116,7 @@
     },
     {
       keywords: ['cleaning', 'maintenance', 'mro', 'hand', 'dielectric', 'ecosolve'],
-      answer: 'Our industrial cleaning line includes:<br>• <b>RED Degreaser</b> — multi-purpose industrial degreaser<br>• <b>TOP Degreaser</b> — mechanic\'s hand cleaner<br>• <b>ECOSOLVE-E5</b> — dielectric solvent (25,000V rating, non-flammable)',
+      answer: 'Our industrial cleaning line includes:<br>• <b>RED Degreaser</b> — multi-purpose industrial degreaser<br>• <b>High-Pressure Alkaline Cleaners (MET-104 LF)</b> — metal cleaning prior to painting<br>• <b>ECOSOLVE-E5</b> — dielectric solvent (25,000V rating, non-flammable)',
     },
     {
       keywords: ['develop', 'custom', 'tailor', 'formul', 'bespoke'],
@@ -124,7 +124,7 @@
     },
     {
       keywords: ['contact', 'phone', 'call', 'email', 'address', 'location', 'where', 'whatsapp', 'reach'],
-      answer: '📍 <b>Address:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, Mexico<br>📞 <b>Phone:</b> (81) 8310 8434 | 1-866-ECOLKEM (US toll-free)<br>📧 <b>Email:</b> servicioalcliente@ecolkem.com<br><br><b>Sales Team:</b><br>• Ing. Fernando González — (81) 8309 6950<br>• Ing. Julián Sánchez — (81) 2040 7554',
+      answer: '📍 <b>Address:</b> Cenizo #2020, Col. Barrio Mirasol 2, C.P. 64102, Monterrey, NL, Mexico<br>📞 <b>Phone:</b> (81) 8310 8434 | 1-866-ECOLKEM (US toll-free)<br>📱 <b>WhatsApp:</b> <a href="https://wa.me/528183108434" class="ecbot-link" target="_blank">+52 81 8310 8434</a><br>📧 <b>Email:</b> servicioalcliente@ecolkem.com',
     },
     {
       keywords: ['hour', 'hours', 'open', 'close', 'schedule', 'time', 'available'],
@@ -200,6 +200,36 @@
     // Styles
     var style = document.createElement('style');
     style.textContent = `
+      /* Global body-copy justification (client request) */
+      section p.text-gray-600,
+      section p.text-gray-300,
+      section p.text-gray-700 {
+        text-align: justify;
+        hyphens: auto;
+      }
+      /* Keep centered sections centered */
+      section .text-center p.text-gray-600,
+      section .text-center p.text-gray-300,
+      section .mx-auto.text-center p,
+      section p.text-gray-300.max-w-2xl { text-align: center; }
+
+      /* Floating WhatsApp button */
+      .ecwa-btn {
+        position: fixed; bottom: 24px; left: 24px; z-index: 9998;
+        width: 56px; height: 56px; border-radius: 50%;
+        background: #25D366; border: none; cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        display: flex; align-items: center; justify-content: center;
+        transition: transform 0.2s, background 0.2s;
+        text-decoration: none;
+      }
+      .ecwa-btn:hover { transform: scale(1.08); background: #1DA851; }
+      .ecwa-btn svg { width: 30px; height: 30px; fill: white; }
+      @media (max-width: 480px) {
+        .ecwa-btn { bottom: 16px; left: 16px; width: 50px; height: 50px; }
+        .ecwa-btn svg { width: 26px; height: 26px; }
+      }
+
       .ecbot-btn {
         position: fixed; bottom: 24px; right: 24px; z-index: 9999;
         width: 60px; height: 60px; border-radius: 50%;
@@ -299,6 +329,16 @@
       }
     `;
     document.head.appendChild(style);
+
+    // Floating WhatsApp button (company line)
+    var wa = document.createElement('a');
+    wa.className = 'ecwa-btn';
+    wa.href = 'https://wa.me/528183108434';
+    wa.target = '_blank';
+    wa.rel = 'noopener';
+    wa.setAttribute('aria-label', isSpanish ? 'Contactar por WhatsApp' : 'Contact us on WhatsApp');
+    wa.innerHTML = '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+    document.body.appendChild(wa);
 
     // Chat button
     var btn = document.createElement('button');
