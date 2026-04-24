@@ -149,7 +149,7 @@
 
           <!-- Image -->
           <div class="mb-12 rounded-lg overflow-hidden shadow-md">
-            <img src="../../Images/Desarrollo-de-productos.png" alt="Product development laboratory" class="w-full h-auto object-cover">
+            <img src="../../Images/productos/laboratorio-id.jpeg" alt="Ecolkem Research and Development laboratory" class="w-full h-auto object-cover">
           </div>
 
           <!-- Development Process -->
@@ -289,11 +289,98 @@
             </div>
           </div>
 
+          <!--
+            TODO: wire form submission with the client.
+            Currently the form falls back to `mailto:` so it still delivers to servicioalcliente@ecolkem.com
+            while we decide between Formspree, EmailJS, Resend, or an in-house SMTP endpoint.
+          -->
+          <div id="diagnostic" class="mb-12 bg-white border border-gray-200 rounded-2xl shadow-sm p-8 md:p-10">
+            <div class="mb-8">
+              <h2 class="text-2xl md:text-3xl font-bold text-navy-800 mb-3">Tell us about your process</h2>
+              <p class="text-gray-600">Our technical team will review your information and propose real improvement alternatives.</p>
+            </div>
+
+            <form action="mailto:servicioalcliente@ecolkem.com?subject=New%20technical%20diagnostic%20%E2%80%93%20Product%20Development" method="post" enctype="text/plain" class="space-y-8">
+
+              <fieldset class="space-y-4">
+                <legend class="text-lg font-bold text-navy-800 mb-3">1. Contact information</legend>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-name-en">Full name *</label>
+                    <input id="diag-name-en" name="Name" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-company-en">Company *</label>
+                    <input id="diag-company-en" name="Company" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-email-en">Email *</label>
+                    <input id="diag-email-en" name="Email" type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="diag-phone-en">Phone <span class="text-gray-400 font-normal">(optional)</span></label>
+                    <input id="diag-phone-en" name="Phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">2. Current process description</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-process-en">Briefly describe the process, application, or product you want to improve:</label>
+                <textarea id="diag-process-en" name="Process" rows="4" required placeholder="e.g. cleaning, phosphatizing, printing, maintenance&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset class="space-y-4">
+                <legend class="text-lg font-bold text-navy-800 mb-3">3. Current situation</legend>
+                <div>
+                  <label class="block text-sm text-gray-600 mb-2" for="diag-current-product-en">What product or solution do you currently use? <span class="text-gray-400">(if applicable)</span></label>
+                  <input id="diag-current-product-en" name="CurrentProduct" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-600 mb-2" for="diag-supplier-en">Current supplier <span class="text-gray-400">(optional)</span></label>
+                  <input id="diag-supplier-en" name="Supplier" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">4. Main problem</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-problem-en">What problem(s) are you currently facing?</label>
+                <textarea id="diag-problem-en" name="Problem" rows="4" required placeholder="e.g. high costs, inconsistent quality, delivery times, regulations&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">5. Project goal</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-goal-en">What would you like to improve or achieve?</label>
+                <textarea id="diag-goal-en" name="Goal" rows="3" required placeholder="e.g. cost reduction, technical improvement, import substitution&hellip;" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">6. Volume / impact</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-volume-en">Approximate consumption or usage level of the product/process:</label>
+                <input id="diag-volume-en" name="Volume" type="text" placeholder='e.g. "200 L/month", "daily use on production line"' class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
+              </fieldset>
+
+              <fieldset>
+                <legend class="text-lg font-bold text-navy-800 mb-3">7. Additional technical information</legend>
+                <label class="block text-sm text-gray-600 mb-2" for="diag-info-en">Share any relevant data about your process (materials, conditions, failures, restrictions, etc.):</label>
+                <textarea id="diag-info-en" name="AdditionalInfo" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition"></textarea>
+              </fieldset>
+
+              <div class="pt-4 border-t border-gray-100">
+                <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3 rounded-lg transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                  Submit diagnostic
+                </button>
+                <p class="text-xs text-gray-500 mt-4">Your information will be reviewed by our technical team. We will contact you shortly.</p>
+              </div>
+            </form>
+          </div>
+
           <!-- CTA -->
           <div class="bg-navy-800 rounded-xl p-8 text-white text-center">
             <h3 class="text-2xl font-bold mb-3">Ready to start a development project?</h3>
             <p class="text-gray-300 mb-5">Tell us about your challenge and we will propose a tailored solution. No obligation.</p>
-            <a href="../contact.html" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-7 py-3 rounded transition">Start a Project</a>
+            <a href="#diagnostic" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-7 py-3 rounded transition">Start Diagnostic</a>
           </div>
 
         </div>
