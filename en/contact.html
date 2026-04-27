@@ -115,7 +115,9 @@
         <div class="lg:col-span-2 mb-12 lg:mb-0">
           <div class="bg-white rounded-lg shadow-lg p-8">
             <h2 class="text-2xl font-bold text-navy-800 mb-6">Send Us a Message</h2>
-            <form class="space-y-5">
+            <form data-mail action="../mail.php" method="POST" class="space-y-5">
+              <input type="hidden" name="_form" value="contacto">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
                 <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition">
@@ -150,6 +152,7 @@
                 <textarea id="message" name="message" rows="5" required placeholder="Tell us about your requirements..." class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition resize-vertical"></textarea>
               </div>
               <button type="submit" class="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3 rounded-lg transition text-lg">Send Message</button>
+              <div data-form-status role="status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -333,5 +336,6 @@
   </script>
 
 <script src="../js/chatbot.js"></script>
+<script src="../js/forms.js"></script>
 </body>
 </html>

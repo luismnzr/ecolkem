@@ -300,7 +300,9 @@
               <p class="text-gray-600">Our technical team will review your information and propose real improvement alternatives.</p>
             </div>
 
-            <form action="mailto:servicioalcliente@ecolkem.com?subject=New%20technical%20diagnostic%20%E2%80%93%20Product%20Development" method="post" enctype="text/plain" class="space-y-8">
+            <form data-mail action="../../mail.php" method="POST" class="space-y-8">
+              <input type="hidden" name="_form" value="diagnostico">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
               <fieldset class="space-y-4">
                 <legend class="text-lg font-bold text-navy-800 mb-3">1. Contact information</legend>
@@ -372,6 +374,7 @@
                   Submit diagnostic
                 </button>
                 <p class="text-xs text-gray-500 mt-4">Your information will be reviewed by our technical team. We will contact you shortly.</p>
+                <div data-form-status role="status" aria-live="polite"></div>
               </div>
             </form>
           </div>
@@ -448,5 +451,6 @@
   </script>
 
 <script src="../../js/chatbot.js"></script>
+<script src="../../js/forms.js"></script>
 </body>
 </html>

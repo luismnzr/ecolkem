@@ -218,18 +218,15 @@
             </ul>
           </div>
 
-          <!--
-            TODO: wire form submission with the client.
-            Currently the form falls back to `mailto:` so it still delivers to servicioalcliente@ecolkem.com
-            while we decide between Formspree, EmailJS, Resend, or an in-house SMTP endpoint.
-          -->
           <div id="diagnostico" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 md:p-10">
             <div class="mb-8">
               <h2 class="text-2xl md:text-3xl font-bold text-navy-800 mb-3">Cu&eacute;ntenos sobre su proceso</h2>
               <p class="text-gray-600">Nuestro equipo t&eacute;cnico analizar&aacute; su informaci&oacute;n y le propondr&aacute; alternativas reales de mejora.</p>
             </div>
 
-            <form id="diagnostic-form" action="mailto:servicioalcliente@ecolkem.com?subject=Nuevo%20diagn%C3%B3stico%20t%C3%A9cnico%20%E2%80%93%20Desarrollo%20de%20producto" method="post" enctype="text/plain" class="space-y-8">
+            <form id="diagnostic-form" data-mail action="../mail.php" method="POST" class="space-y-8">
+              <input type="hidden" name="_form" value="diagnostico">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
               <fieldset class="space-y-4">
                 <legend class="text-lg font-bold text-navy-800 mb-3">1. Informaci&oacute;n de contacto</legend>
@@ -301,6 +298,7 @@
                   Enviar diagn&oacute;stico
                 </button>
                 <p class="text-xs text-gray-500 mt-4">Su informaci&oacute;n ser&aacute; revisada por nuestro equipo t&eacute;cnico. Nos pondremos en contacto en breve.</p>
+                <div data-form-status role="status" aria-live="polite"></div>
               </div>
             </form>
           </div>
@@ -395,5 +393,6 @@
     });
   </script>
 <script src="../js/chatbot.js"></script>
+<script src="../js/forms.js"></script>
 </body>
 </html>
