@@ -324,10 +324,42 @@
     </div>
   </footer>
 
+  <!-- Expogr&aacute;fica 2026 Popup (temporal hasta el 9 de mayo de 2026) -->
+  <div id="expografica-popup" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/70 p-4">
+    <div class="relative bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[95vh] overflow-y-auto">
+      <button id="expografica-close" aria-label="Cerrar" class="absolute top-2 right-2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-gray-700 hover:text-accent-500 shadow-md transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="contacto.html" class="block">
+        <img src="Images/expografica-2026.jpg" alt="Visite a Ecolkem en Expogr&aacute;fica 2026, Stand 1658, Expo Guadalajara, 6 al 9 de mayo de 2026" class="w-full h-auto rounded-lg">
+      </a>
+    </div>
+  </div>
+
   <script>
     document.getElementById('menu-btn').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+    (function () {
+      var popup = document.getElementById('expografica-popup');
+      if (!popup) return;
+      var eventEnd = new Date('2026-05-10T00:00:00-06:00');
+      if (new Date() >= eventEnd) return;
+      if (sessionStorage.getItem('expograficaPopupDismissed') === '1') return;
+      setTimeout(function () {
+        popup.classList.remove('hidden');
+        popup.classList.add('flex');
+      }, 1200);
+      function close() {
+        popup.classList.add('hidden');
+        popup.classList.remove('flex');
+        sessionStorage.setItem('expograficaPopupDismissed', '1');
+      }
+      document.getElementById('expografica-close').addEventListener('click', close);
+      popup.addEventListener('click', function (e) { if (e.target === popup) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
   </script>
 
 <script src="js/chatbot.js"></script>
